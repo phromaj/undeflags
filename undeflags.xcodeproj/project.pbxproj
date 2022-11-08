@@ -14,6 +14,7 @@
 		BF4A29AE291A9DA7008B3FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4A29AD291A9DA7008B3FB5 /* Assets.xcassets */; };
 		BF4A29B1291A9DA7008B3FB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4A29AF291A9DA7008B3FB5 /* LaunchScreen.storyboard */; };
 		BF4A29B9291A9EC2008B3FB5 /* FlagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */; };
+		BF4A29BB291AA2DA008B3FB5 /* PseudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BF4A29B0291A9DA7008B3FB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4A29B2291A9DA7008B3FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsCollectionViewController.swift; sourceTree = "<group>"; };
+		BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				BF4A29A6291A9DA6008B3FB5 /* SceneDelegate.swift */,
 				BF4A29A8291A9DA6008B3FB5 /* ViewController.swift */,
 				BF4A29AA291A9DA6008B3FB5 /* Main.storyboard */,
+				BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */,
 				BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */,
 				BF4A29AD291A9DA7008B3FB5 /* Assets.xcassets */,
 				BF4A29AF291A9DA7008B3FB5 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				BF4A29A9291A9DA6008B3FB5 /* ViewController.swift in Sources */,
 				BF4A29A5291A9DA6008B3FB5 /* AppDelegate.swift in Sources */,
+				BF4A29BB291AA2DA008B3FB5 /* PseudoViewController.swift in Sources */,
 				BF4A29B9291A9EC2008B3FB5 /* FlagsCollectionViewController.swift in Sources */,
 				BF4A29A7291A9DA6008B3FB5 /* SceneDelegate.swift in Sources */,
 			);

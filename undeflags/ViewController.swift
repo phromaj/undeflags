@@ -20,5 +20,11 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func gameButton(_ sender: Any) {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pseudo") as? PseudoViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 
