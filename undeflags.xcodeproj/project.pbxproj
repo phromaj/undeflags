@@ -14,6 +14,8 @@
 		BF4A29AE291A9DA7008B3FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4A29AD291A9DA7008B3FB5 /* Assets.xcassets */; };
 		BF4A29B1291A9DA7008B3FB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4A29AF291A9DA7008B3FB5 /* LaunchScreen.storyboard */; };
 		BF4A29B9291A9EC2008B3FB5 /* FlagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */; };
+		D47547C2291AA1C70001014F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47547C1291AA1C70001014F /* Player.swift */; };
+		D47547C5291AA2420001014F /* PlayerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47547C4291AA2420001014F /* PlayerDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BF4A29B0291A9DA7008B3FB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4A29B2291A9DA7008B3FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsCollectionViewController.swift; sourceTree = "<group>"; };
+		D47547C1291AA1C70001014F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D47547C4291AA2420001014F /* PlayerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		BF4A29A3291A9DA6008B3FB5 /* undeflags */ = {
 			isa = PBXGroup;
 			children = (
+				D47547C3291AA2260001014F /* Managers */,
+				D47547C0291AA1A10001014F /* Models */,
 				BF4A29A4291A9DA6008B3FB5 /* AppDelegate.swift */,
 				BF4A29A6291A9DA6008B3FB5 /* SceneDelegate.swift */,
 				BF4A29A8291A9DA6008B3FB5 /* ViewController.swift */,
@@ -68,6 +74,22 @@
 				BF4A29B2291A9DA7008B3FB5 /* Info.plist */,
 			);
 			path = undeflags;
+			sourceTree = "<group>";
+		};
+		D47547C0291AA1A10001014F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D47547C1291AA1C70001014F /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D47547C3291AA2260001014F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D47547C4291AA2420001014F /* PlayerDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +166,8 @@
 				BF4A29A9291A9DA6008B3FB5 /* ViewController.swift in Sources */,
 				BF4A29A5291A9DA6008B3FB5 /* AppDelegate.swift in Sources */,
 				BF4A29B9291A9EC2008B3FB5 /* FlagsCollectionViewController.swift in Sources */,
+				D47547C2291AA1C70001014F /* Player.swift in Sources */,
+				D47547C5291AA2420001014F /* PlayerDataManager.swift in Sources */,
 				BF4A29A7291A9DA6008B3FB5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
