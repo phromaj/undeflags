@@ -16,6 +16,9 @@
 		BF4A29B9291A9EC2008B3FB5 /* FlagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */; };
 		D47547C2291AA1C70001014F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47547C1291AA1C70001014F /* Player.swift */; };
 		D47547C5291AA2420001014F /* PlayerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47547C4291AA2420001014F /* PlayerDataManager.swift */; };
+		BF4A29BB291AA2DA008B3FB5 /* PseudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */; };
+		BF4A29BD291AAB38008B3FB5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29BC291AAB38008B3FB5 /* QuestionViewController.swift */; };
+		BF4A29C0291AAD06008B3FB5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4A29BF291AAD06008B3FB5 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsCollectionViewController.swift; sourceTree = "<group>"; };
 		D47547C1291AA1C70001014F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D47547C4291AA2420001014F /* PlayerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataManager.swift; sourceTree = "<group>"; };
+		BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoViewController.swift; sourceTree = "<group>"; };
+		BF4A29BC291AAB38008B3FB5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		BF4A29BF291AAD06008B3FB5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4A29C0291AAD06008B3FB5 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,7 @@
 			children = (
 				BF4A29A3291A9DA6008B3FB5 /* undeflags */,
 				BF4A29A2291A9DA6008B3FB5 /* Products */,
+				BF4A29BE291AAD06008B3FB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +76,8 @@
 				BF4A29A6291A9DA6008B3FB5 /* SceneDelegate.swift */,
 				BF4A29A8291A9DA6008B3FB5 /* ViewController.swift */,
 				BF4A29AA291A9DA6008B3FB5 /* Main.storyboard */,
+				BF4A29BC291AAB38008B3FB5 /* QuestionViewController.swift */,
+				BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */,
 				BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */,
 				BF4A29AD291A9DA7008B3FB5 /* Assets.xcassets */,
 				BF4A29AF291A9DA7008B3FB5 /* LaunchScreen.storyboard */,
@@ -90,6 +100,14 @@
 				D47547C4291AA2420001014F /* PlayerDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		BF4A29BE291AAD06008B3FB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF4A29BF291AAD06008B3FB5 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +183,8 @@
 			files = (
 				BF4A29A9291A9DA6008B3FB5 /* ViewController.swift in Sources */,
 				BF4A29A5291A9DA6008B3FB5 /* AppDelegate.swift in Sources */,
+				BF4A29BD291AAB38008B3FB5 /* QuestionViewController.swift in Sources */,
+				BF4A29BB291AA2DA008B3FB5 /* PseudoViewController.swift in Sources */,
 				BF4A29B9291A9EC2008B3FB5 /* FlagsCollectionViewController.swift in Sources */,
 				D47547C2291AA1C70001014F /* Player.swift in Sources */,
 				D47547C5291AA2420001014F /* PlayerDataManager.swift in Sources */,
