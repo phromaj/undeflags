@@ -10,6 +10,11 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class FlagsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+//    var img = ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/640px-NewTux.svg.png",
+//               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/2312px-Picture_icon_BLACK.svg.png",
+//               "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/SVG_Logo.svg/1200px-SVG_Logo.svg.png",
+//               "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bananas.svg/560px-Bananas.svg.png"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +34,6 @@ class FlagsCollectionViewController: UICollectionViewController, UICollectionVie
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        cell.backgroundColor = .systemRed
         
         return cell
     }

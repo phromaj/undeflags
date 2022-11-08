@@ -75,19 +75,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZb-0i-Clq">
-                                <rect key="frame" x="148" y="423" width="97" height="34"/>
+                                <rect key="frame" x="94" y="423" width="200" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBK-zK-RfR">
+                                <rect key="frame" x="174" y="516" width="46" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go"/>
+                                <connections>
+                                    <action selector="goButton:" destination="Hgt-qm-Vck" eventType="touchUpInside" id="Ng0-Yr-BhZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IKN-XC-fZi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tgh-V1-lNc" firstAttribute="top" secondItem="IKN-XC-fZi" secondAttribute="top" constant="310" id="2az-Rs-uNm"/>
-                            <constraint firstItem="IKN-XC-fZi" firstAttribute="trailing" secondItem="TZb-0i-Clq" secondAttribute="trailing" constant="148" id="5pO-fo-7rB"/>
+                            <constraint firstItem="IKN-XC-fZi" firstAttribute="trailing" secondItem="XBK-zK-RfR" secondAttribute="trailing" constant="173" id="3u5-gY-r8f"/>
+                            <constraint firstItem="IKN-XC-fZi" firstAttribute="trailing" secondItem="TZb-0i-Clq" secondAttribute="trailing" constant="99" id="5pO-fo-7rB"/>
+                            <constraint firstItem="XBK-zK-RfR" firstAttribute="top" secondItem="TZb-0i-Clq" secondAttribute="bottom" constant="59" id="6Ku-kR-Mve"/>
                             <constraint firstItem="IKN-XC-fZi" firstAttribute="trailing" secondItem="tgh-V1-lNc" secondAttribute="trailing" constant="139" id="IAu-CC-yi1"/>
-                            <constraint firstItem="TZb-0i-Clq" firstAttribute="leading" secondItem="IKN-XC-fZi" secondAttribute="leading" constant="148" id="Tvc-Yf-Z1v"/>
+                            <constraint firstItem="TZb-0i-Clq" firstAttribute="leading" secondItem="IKN-XC-fZi" secondAttribute="leading" constant="94" id="Tvc-Yf-Z1v"/>
                             <constraint firstItem="TZb-0i-Clq" firstAttribute="top" secondItem="tgh-V1-lNc" secondAttribute="bottom" constant="33" id="X5k-xW-3ge"/>
+                            <constraint firstItem="XBK-zK-RfR" firstAttribute="leading" secondItem="IKN-XC-fZi" secondAttribute="leading" constant="174" id="f5M-IB-ozv"/>
                             <constraint firstItem="tgh-V1-lNc" firstAttribute="leading" secondItem="IKN-XC-fZi" secondAttribute="leading" constant="139" id="fbr-bm-hYG"/>
                         </constraints>
                     </view>
@@ -95,6 +106,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXN-8C-X7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="671.83098591549299"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="ieS-xn-DOE">
+            <objects>
+                <viewController storyboardIdentifier="question" id="ppp-c4-Tob" customClass="QuestionViewController" customModule="undeflags" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pev-64-aJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YW5-eV-9kl">
+                                <rect key="frame" x="162" y="136" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-oV-9fm">
+                                <rect key="frame" x="145.66666666666666" y="510" width="103" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Réponse 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4L-0r-Es4">
+                                <rect key="frame" x="144" y="575" width="106" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Réponse 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-6v-JGD">
+                                <rect key="frame" x="144" y="648" width="106" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Réponse 3"/>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZg-r5-2Kh">
+                                <rect key="frame" x="76" y="255" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4TR-s7-52s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k4L-0r-Es4" firstAttribute="centerX" secondItem="mWf-oV-9fm" secondAttribute="centerX" id="3tV-uh-G0c"/>
+                            <constraint firstItem="FZg-r5-2Kh" firstAttribute="top" secondItem="YW5-eV-9kl" secondAttribute="bottom" constant="98" id="832-et-cIr"/>
+                            <constraint firstAttribute="bottom" secondItem="k4L-0r-Es4" secondAttribute="bottom" constant="242" id="8RG-c4-1i0"/>
+                            <constraint firstItem="4TR-s7-52s" firstAttribute="trailing" secondItem="FZg-r5-2Kh" secondAttribute="trailing" constant="77" id="8ZB-Su-HqQ"/>
+                            <constraint firstItem="YW5-eV-9kl" firstAttribute="top" secondItem="4TR-s7-52s" secondAttribute="top" constant="77" id="IzP-0y-el3"/>
+                            <constraint firstItem="YW5-eV-9kl" firstAttribute="leading" secondItem="4TR-s7-52s" secondAttribute="leading" constant="162" id="MmI-dP-vHI"/>
+                            <constraint firstItem="Zym-6v-JGD" firstAttribute="leading" secondItem="4TR-s7-52s" secondAttribute="leading" constant="144" id="Slk-be-ZZz"/>
+                            <constraint firstItem="FZg-r5-2Kh" firstAttribute="leading" secondItem="4TR-s7-52s" secondAttribute="leading" constant="76" id="Z2v-Bm-dfd"/>
+                            <constraint firstItem="k4L-0r-Es4" firstAttribute="leading" secondItem="Zym-6v-JGD" secondAttribute="leading" id="bC5-VI-Pct"/>
+                            <constraint firstItem="Zym-6v-JGD" firstAttribute="top" secondItem="k4L-0r-Es4" secondAttribute="bottom" constant="38" id="gQn-pc-5tG"/>
+                            <constraint firstItem="4TR-s7-52s" firstAttribute="trailing" secondItem="YW5-eV-9kl" secondAttribute="trailing" constant="162" id="kAA-cC-301"/>
+                            <constraint firstItem="k4L-0r-Es4" firstAttribute="top" secondItem="mWf-oV-9fm" secondAttribute="bottom" constant="30" id="oPz-hJ-4Pz"/>
+                            <constraint firstItem="k4L-0r-Es4" firstAttribute="centerX" secondItem="Zym-6v-JGD" secondAttribute="centerX" id="okW-pJ-dBV"/>
+                            <constraint firstItem="4TR-s7-52s" firstAttribute="trailing" secondItem="Zym-6v-JGD" secondAttribute="trailing" constant="143" id="tAl-TM-3N3"/>
+                            <constraint firstItem="mWf-oV-9fm" firstAttribute="top" secondItem="FZg-r5-2Kh" secondAttribute="bottom" constant="127" id="uOR-Hn-d4w"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTr-YW-pAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="1342"/>
         </scene>
         <!--Flags Collection View Controller-->
         <scene sceneID="5Cf-k9-5sf">
@@ -117,17 +191,6 @@
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wM0-0n-Qt6">
                                     <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eut-b2-hwg">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <wkWebViewConfiguration key="configuration">
-                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                <wkPreferences key="preferences"/>
-                                            </wkWebViewConfiguration>
-                                        </wkWebView>
-                                    </subviews>
                                 </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
