@@ -8,13 +8,33 @@
 import Foundation
 
 class PlayerDataManager {
-    var player: Player
+    static let shared = PlayerDataManager()
+    private init(){}
+
+    var player: Player?
+
     
-    init(player: Player) {
+    func setPlayer(player: Player) {
         self.player = player
     }
     
     func addPoint(){
-        self.player.points += 1
+        self.player?.points += 1
     }
+    
+    func savePlayerData(){
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(self.player)
+            let defaults = UserDefaults.standard
+            defaults.set(data, forKey: "player")
+
+        } catch {
+            print("Unable to store player data (\(error))")
+        }
+    }
+    
 }

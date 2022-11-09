@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Player{
+struct Player: Codable{
     var username: String
     var points: Int
     
 }
 
 extension Player {
-    init?(username: String){
+    init(username: String){
         self.username = username
         self.points = 0
     }

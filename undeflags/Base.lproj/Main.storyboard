@@ -102,6 +102,9 @@
                             <constraint firstItem="tgh-V1-lNc" firstAttribute="leading" secondItem="IKN-XC-fZi" secondAttribute="leading" constant="139" id="fbr-bm-hYG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usernameInput" destination="TZb-0i-Clq" id="iOE-cD-5L6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXN-8C-X7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
