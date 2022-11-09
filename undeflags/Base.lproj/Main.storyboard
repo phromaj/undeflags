@@ -124,18 +124,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-oV-9fm">
-                                <rect key="frame" x="145.66666666666666" y="510" width="103" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Réponse 1"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4L-0r-Es4">
                                 <rect key="frame" x="144" y="575" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Réponse 2"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-6v-JGD">
-                                <rect key="frame" x="144" y="648" width="106" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-6v-JGD">
+                                <rect key="frame" x="144" y="634" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Réponse 3"/>
                             </button>
@@ -147,6 +142,11 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-oV-9fm">
+                                <rect key="frame" x="144" y="513" width="103" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Réponse 1"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4TR-s7-52s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,6 +168,12 @@
                             <constraint firstItem="mWf-oV-9fm" firstAttribute="top" secondItem="FZg-r5-2Kh" secondAttribute="bottom" constant="127" id="uOR-Hn-d4w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answer1Button" destination="mWf-oV-9fm" id="GDl-5i-zyy"/>
+                        <outlet property="answer2Button" destination="k4L-0r-Es4" id="GAy-jM-Mot"/>
+                        <outlet property="answer3Button" destination="Zym-6v-JGD" id="Ju9-kR-kge"/>
+                        <outlet property="flagWebView" destination="FZg-r5-2Kh" id="pah-Me-41S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTr-YW-pAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

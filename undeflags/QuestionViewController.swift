@@ -6,42 +6,44 @@
 //
 
 import UIKit
+import WebKit
 
 class QuestionViewController: UIViewController {
-
+    
+    @IBOutlet weak var flagWebView: WKWebView!
+    
+    @IBOutlet weak var answer1Button: UIButton!
+    
+    @IBOutlet weak var answer2Button: UIButton!
+    
+    @IBOutlet weak var answer3Button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let user = UserDefaults.standard.data(forKey: "player") {
-//            do {
-//                // Create JSON Decoder
-//                let decoder = JSONDecoder()
-//
-//                // Decode Note
-//                let player = try decoder.decode(Player.self, from: user)
-//                print(player)
-//
-//            } catch {
-//                print("Unable to Decode Note (\(error))")
-//            }
-//        }
+        
+        
+        
         let player = PlayerDataManager.shared.player
+        
         var questions : [Question] = []
+        
         for (index, flag) in DataManager.shared.flags!.enumerated() {
-            var question: Question
-            switch flag.name {
-                case "lesbian":
-                    var answer = flag.name + " " + flag.year
-                    question = Question(answer: answer, link: DataManager.shared.svgLinks![index], hasBeenQuestion: false)
-                case "pride":
-                    var answer = flag.name + " " + flag.year
-                    question = Question(answer: answer, link: DataManager.shared.svgLinks![index], hasBeenQuestion: false)
-                default:
-                    var answer = flag.name + " " + flag.year
-                    question = Question(answer: answer, link: DataManager.shared.svgLinks![index], hasBeenQuestion: false)
-            }
+            
+    
+            var question: Question = Question(answer: "\(flag.name) \(flag.year)",
+                                              link: DataManager.shared.svgLinks![index],
+                                              index: index,
+                                              hasBeenQuestion: false)
             questions.append(question)
         }
-    
+        
+        var selectedQuestion = questions.randomElement()
+        
+        if selectedQuestion.hasBeenQuestion {
+            
+        }
+        
+        self.reloadWebView(urlString: selectedQuestion!.link)
         
         // Choose a random question
         
@@ -52,5 +54,11 @@ class QuestionViewController: UIViewController {
         // On affiche
                 
     }
+    
+    func reloadWebView(urlString: String ){
+          let url = URL(string: urlString)!
+          let request = URLRequest(url: url)
+          self.flagWebView.load(request)
+      }
 
 }
