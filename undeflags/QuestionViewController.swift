@@ -25,20 +25,32 @@ class QuestionViewController: UIViewController {
 //            }
 //        }
         let player = PlayerDataManager.shared.player
-        print(player ?? "optional")
-
-        // Do any additional setup after loading the view.
-    }
+        var questions : [Question] = []
+        for (index, flag) in DataManager.shared.flags!.enumerated() {
+            var question: Question
+            switch flag.name {
+                case "lesbian":
+                    var answer = flag.name + " " + flag.year
+                    question = Question(answer: answer, link: DataManager.shared.svgLinks![index], hasBeenQuestion: false)
+                case "pride":
+                    var answer = flag.name + " " + flag.year
+                    question = Question(answer: answer, link: DataManager.shared.svgLinks![index], hasBeenQuestion: false)
+                default:
+                    var answer = flag.name + " " + flag.year
+                    question = Question(answer: answer, link: DataManager.shared.svgLinks![index], hasBeenQuestion: false)
+            }
+            questions.append(question)
+        }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        // Choose a random question
+        
+        // On va l'afficher
+        
+        // On change la propriété de la question "hasbeenQuestion" en true
+        
+        // On affiche
+                
     }
-    */
 
 }

@@ -13,4 +13,6 @@ class DataManager {
     var svgLinks: [String]?
     
     private init() { }
+    
+    
 }
