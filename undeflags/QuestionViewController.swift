@@ -101,14 +101,12 @@ class QuestionViewController: UIViewController {
     
     func chooseAnswer(button: UIButton){
         if button.title(for: .normal)! == self.selectedQuestion.answer{
-            print("you wiiin")
             // Add a point to player
             PlayerDataManager.shared.addPoint()
             // Select new question
             loadNextQuestion()
         }
         else {
-            print("you looooooose")
             // Select new question
             loadNextQuestion()
             
@@ -119,7 +117,8 @@ class QuestionViewController: UIViewController {
         self.level += 1
         // End game if we completed level 5
         if(level > 5){
-            // Push ending screen
+            // HERE Push ending screen ////////
+            //////////////////////////////////////////////////////////////////////
             print("GAME IS WON OOOOOVVERRR")
             print(PlayerDataManager.shared.player?.points)
         }
