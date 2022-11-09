@@ -15,6 +15,7 @@ class ViewController: UIViewController {
             DataManager.shared.flags = flags
             DataManager.shared.svgLinks = ApiHandler.getAllSvgs(flags: flags)
         }
+    
     }
 
     @IBAction func flagsButton(_ sender: Any) {

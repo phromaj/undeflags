@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0D0368291BE9CC00EAA0D6 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D0367291BE9CC00EAA0D6 /* SupportViewController.swift */; };
 		BF4A29A5291A9DA6008B3FB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29A4291A9DA6008B3FB5 /* AppDelegate.swift */; };
 		BF4A29A7291A9DA6008B3FB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29A6291A9DA6008B3FB5 /* SceneDelegate.swift */; };
 		BF4A29A9291A9DA6008B3FB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29A8291A9DA6008B3FB5 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0D0367291BE9CC00EAA0D6 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		BF4A29A1291A9DA6008B3FB5 /* undeflags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = undeflags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4A29A4291A9DA6008B3FB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF4A29A6291A9DA6008B3FB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				BF4A29A6291A9DA6008B3FB5 /* SceneDelegate.swift */,
 				BF4A29A8291A9DA6008B3FB5 /* ViewController.swift */,
 				BF4A29AA291A9DA6008B3FB5 /* Main.storyboard */,
+				BF0D0367291BE9CC00EAA0D6 /* SupportViewController.swift */,
 				BFA4760A291BA9A1006F7822 /* FlagsTableViewController.swift */,
 				BF4A29C1291AB242008B3FB5 /* DetailFlagViewController.swift */,
 				BF4A29BC291AAB38008B3FB5 /* QuestionViewController.swift */,
@@ -173,6 +176,7 @@
 			files = (
 				BF4A29A9291A9DA6008B3FB5 /* ViewController.swift in Sources */,
 				BFA47608291B9CC9006F7822 /* DataManager.swift in Sources */,
+				BF0D0368291BE9CC00EAA0D6 /* SupportViewController.swift in Sources */,
 				BF4A29A5291A9DA6008B3FB5 /* AppDelegate.swift in Sources */,
 				BF4A29C2291AB242008B3FB5 /* DetailFlagViewController.swift in Sources */,
 				BF4A29BD291AAB38008B3FB5 /* QuestionViewController.swift in Sources */,

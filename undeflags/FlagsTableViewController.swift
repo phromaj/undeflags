@@ -14,6 +14,8 @@ class FlagsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Drapeaux"
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
