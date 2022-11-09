@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func flagsButton(_ sender: Any) {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "flags") as? FlagsCollectionViewController {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "listFlags") as? FlagsTableViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -13,18 +13,17 @@
 		BF4A29AC291A9DA6008B3FB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4A29AA291A9DA6008B3FB5 /* Main.storyboard */; };
 		BF4A29AE291A9DA7008B3FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4A29AD291A9DA7008B3FB5 /* Assets.xcassets */; };
 		BF4A29B1291A9DA7008B3FB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4A29AF291A9DA7008B3FB5 /* LaunchScreen.storyboard */; };
-		BF4A29B9291A9EC2008B3FB5 /* FlagsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */; };
 		BF4A29BB291AA2DA008B3FB5 /* PseudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */; };
 		BF4A29BD291AAB38008B3FB5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29BC291AAB38008B3FB5 /* QuestionViewController.swift */; };
 		BF4A29C0291AAD06008B3FB5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4A29BF291AAD06008B3FB5 /* WebKit.framework */; };
 		BF4A29C2291AB242008B3FB5 /* DetailFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29C1291AB242008B3FB5 /* DetailFlagViewController.swift */; };
-		BF4A29C8291AD802008B3FB5 /* ItemFlagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A29C7291AD802008B3FB5 /* ItemFlagCollectionViewCell.swift */; };
 		BFA47607291B9CC9006F7822 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA47604291B9CC9006F7822 /* ApiHandler.swift */; };
 		BFA47608291B9CC9006F7822 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA47605291B9CC9006F7822 /* DataManager.swift */; };
 		BFA47609291B9CC9006F7822 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA47606291B9CC9006F7822 /* Flag.swift */; };
 		D4414695291BB6FD006E7FBC /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4414694291BB6FD006E7FBC /* Question.swift */; };
 		D47547C2291AA1C70001014F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47547C1291AA1C70001014F /* Player.swift */; };
 		D47547C5291AA2420001014F /* PlayerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47547C4291AA2420001014F /* PlayerDataManager.swift */; };
+		BFA4760B291BA9A1006F7822 /* FlagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4760A291BA9A1006F7822 /* FlagsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,18 +35,17 @@
 		BF4A29AD291A9DA7008B3FB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF4A29B0291A9DA7008B3FB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4A29B2291A9DA7008B3FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsCollectionViewController.swift; sourceTree = "<group>"; };
 		BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoViewController.swift; sourceTree = "<group>"; };
 		BF4A29BC291AAB38008B3FB5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		BF4A29BF291AAD06008B3FB5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BF4A29C1291AB242008B3FB5 /* DetailFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlagViewController.swift; sourceTree = "<group>"; };
-		BF4A29C7291AD802008B3FB5 /* ItemFlagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFlagCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFA47604291B9CC9006F7822 /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		BFA47605291B9CC9006F7822 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BFA47606291B9CC9006F7822 /* Flag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		D4414694291BB6FD006E7FBC /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D47547C1291AA1C70001014F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D47547C4291AA2420001014F /* PlayerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataManager.swift; sourceTree = "<group>"; };
+		BFA4760A291BA9A1006F7822 /* FlagsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +89,10 @@
 				BF4A29A6291A9DA6008B3FB5 /* SceneDelegate.swift */,
 				BF4A29A8291A9DA6008B3FB5 /* ViewController.swift */,
 				BF4A29AA291A9DA6008B3FB5 /* Main.storyboard */,
+				BFA4760A291BA9A1006F7822 /* FlagsTableViewController.swift */,
 				BF4A29C1291AB242008B3FB5 /* DetailFlagViewController.swift */,
 				BF4A29BC291AAB38008B3FB5 /* QuestionViewController.swift */,
 				BF4A29BA291AA2DA008B3FB5 /* PseudoViewController.swift */,
-				BF4A29B8291A9EC2008B3FB5 /* FlagsCollectionViewController.swift */,
-				BF4A29C7291AD802008B3FB5 /* ItemFlagCollectionViewCell.swift */,
 				BF4A29AD291A9DA7008B3FB5 /* Assets.xcassets */,
 				BF4A29AF291A9DA7008B3FB5 /* LaunchScreen.storyboard */,
 				BF4A29B2291A9DA7008B3FB5 /* Info.plist */,
@@ -205,6 +202,7 @@
 				BF4A29C2291AB242008B3FB5 /* DetailFlagViewController.swift in Sources */,
 				BF4A29BD291AAB38008B3FB5 /* QuestionViewController.swift in Sources */,
 				D4414695291BB6FD006E7FBC /* Question.swift in Sources */,
+				BFA4760B291BA9A1006F7822 /* FlagsTableViewController.swift in Sources */,
 				BFA47607291B9CC9006F7822 /* ApiHandler.swift in Sources */,
 				BFA47609291B9CC9006F7822 /* Flag.swift in Sources */,
 				BF4A29BB291AA2DA008B3FB5 /* PseudoViewController.swift in Sources */,
