@@ -128,11 +128,17 @@
                                 <rect key="frame" x="144" y="575" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Réponse 2"/>
+                                <connections>
+                                    <action selector="answerTwoAction:" destination="ppp-c4-Tob" eventType="touchUpInside" id="mK1-CF-At4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zym-6v-JGD">
                                 <rect key="frame" x="144" y="634" width="106" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Réponse 3"/>
+                                <connections>
+                                    <action selector="answerThreeAction:" destination="ppp-c4-Tob" eventType="touchUpInside" id="8al-ke-c2Y"/>
+                                </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZg-r5-2Kh">
                                 <rect key="frame" x="76" y="255" width="240" height="128"/>
@@ -146,6 +152,9 @@
                                 <rect key="frame" x="144" y="513" width="103" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Réponse 1"/>
+                                <connections>
+                                    <action selector="answerOneAction:" destination="ppp-c4-Tob" eventType="touchUpInside" id="CM8-Nm-sOJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4TR-s7-52s"/>
