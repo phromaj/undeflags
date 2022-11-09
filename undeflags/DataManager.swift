@@ -10,7 +10,7 @@ import Foundation
 class DataManager {
     static let shared = DataManager()
     var flags: [Flag]?
-    var svgLinks: [URL]?
+    var svgLinks: [String]?
     
     private init() { }
 }

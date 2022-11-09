@@ -6,14 +6,23 @@
 import Foundation
 
 // MARK: - Flag
-struct Flag: Codable {
-    let name, id, year, emoji: String
-    let colors: [Color]
-    let svg: String
+struct Flag {
+    let name, id, year, svg: String
 }
 
-// MARK: - Color
-struct Color: Codable {
-    let name, hexCode: String
-    let r, g, b: Int
+extension Flag {
+    init?(json: [String: AnyObject]) {
+        guard let name = json["name"] as? String,
+            let id = json["id"] as? String,
+            let year = json["year"] as? String,
+              let svg = json["svg"] as? String
+        else {
+            return nil
+        }
+
+        self.name = name
+        self.id = id
+        self.year = year
+        self.svg = svg
+    }
 }

@@ -14,38 +14,38 @@ class ApiHandler {
     static func getAllFlags(completion: @escaping CompletionHandler) {
         
         let url = URL(string:"https://pride.dev/api/flags")
+        var flagsFinal:[Flag] = []
         
         // Make the async request and pass the resulting json object to the callback
         let task = URLSession.shared.dataTask(with: url! , completionHandler:  { (data, response, error) in
             do {
-                if (try JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject]) != nil {
-                    let flags =  self.parse(json: data!)
+                if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) {
+                    if let dataFlags = json as? [[String:AnyObject]] {
+                        for flag in dataFlags {
+                            
+                            if let flag = Flag(json: flag) {
+                                flagsFinal.append(flag)
+                            }
+                            
+                        }
+                    }
+                    
                                         
-                    completion(flags)
+                    completion(flagsFinal)
                 }
-            } catch let error as NSError {
-                print(error.localizedDescription)
             }
         })
         task.resume()
     }
 
-    static func getAllSvgs(flags: [Flag]) -> [URL]{
-        var svgLinks = [URL]()
+    static func getAllSvgs(flags: [Flag]) -> [String]{
+        var svgLinks = [String]()
         for flag in flags {
-            svgLinks.append(URL(string: "https://pride.dev/api/flags/\(flag.id)/SVG")!)
+            svgLinks.append("https://pride.dev/api/flags/\(flag.id)/SVG")
         }
         return svgLinks
     }
 
-    
-    static func parse(json: Data) -> [Flag] {
-        let decoder = JSONDecoder()
-        if let flags = try? decoder.decode(Flag.self, from: json) {
-            return [flags]
-        }
-        return []
-    }
     
 }
 

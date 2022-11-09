@@ -185,13 +185,27 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jd4-UM-gOC">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="flagCell" id="jd4-UM-gOC" customClass="ItemFlagCollectionViewCell" customModule="undeflags" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wM0-0n-Qt6">
                                     <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-Sr-F8w">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <wkWebViewConfiguration key="configuration">
+                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                <wkPreferences key="preferences"/>
+                                            </wkWebViewConfiguration>
+                                        </wkWebView>
+                                    </subviews>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imgItemWebView" destination="f9h-Sr-F8w" id="iPM-Wo-w50"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -203,6 +217,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWl-gD-PQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1858.7786259541983" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail Flag View Controller-->
+        <scene sceneID="trb-8a-ze9">
+            <objects>
+                <viewController storyboardIdentifier="detailFlag" id="z8G-Ds-Hcw" customClass="DetailFlagViewController" customModule="undeflags" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9rR-KO-yOl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS6-qK-e6m">
+                                <rect key="frame" x="175" y="158" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9Z-R6-dQO">
+                                <rect key="frame" x="16" y="366" width="361" height="184"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Année" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNL-Ff-mFb">
+                                <rect key="frame" x="175" y="248" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="36p-Id-vV9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="36p-Id-vV9" firstAttribute="trailing" secondItem="jNL-Ff-mFb" secondAttribute="trailing" constant="169" id="8CG-cC-Pta"/>
+                            <constraint firstItem="jNL-Ff-mFb" firstAttribute="leading" secondItem="36p-Id-vV9" secondAttribute="leading" constant="175" id="BLo-U6-FwC"/>
+                            <constraint firstItem="a9Z-R6-dQO" firstAttribute="top" secondItem="jNL-Ff-mFb" secondAttribute="bottom" constant="97" id="NbC-nh-JAQ"/>
+                            <constraint firstItem="jNL-Ff-mFb" firstAttribute="top" secondItem="WS6-qK-e6m" secondAttribute="bottom" constant="69" id="VoP-f8-qVY"/>
+                            <constraint firstItem="36p-Id-vV9" firstAttribute="bottom" secondItem="a9Z-R6-dQO" secondAttribute="bottom" constant="268" id="WRW-p6-dni"/>
+                            <constraint firstItem="a9Z-R6-dQO" firstAttribute="leading" secondItem="36p-Id-vV9" secondAttribute="leading" constant="16" id="eYS-nU-XjQ"/>
+                            <constraint firstItem="36p-Id-vV9" firstAttribute="trailing" secondItem="WS6-qK-e6m" secondAttribute="trailing" constant="173" id="qpd-le-aJg"/>
+                            <constraint firstItem="WS6-qK-e6m" firstAttribute="top" secondItem="36p-Id-vV9" secondAttribute="top" constant="99" id="sQe-8d-PpF"/>
+                            <constraint firstItem="36p-Id-vV9" firstAttribute="trailing" secondItem="a9Z-R6-dQO" secondAttribute="trailing" constant="16" id="wUw-L1-LdQ"/>
+                            <constraint firstItem="WS6-qK-e6m" firstAttribute="leading" secondItem="36p-Id-vV9" secondAttribute="leading" constant="175" id="zp6-ja-ygO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgWKWebView" destination="a9Z-R6-dQO" id="s3a-Kv-1vN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8G-nQ-u9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638.9312977099235" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1vK-N5-Iff">

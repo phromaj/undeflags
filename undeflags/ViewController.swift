@@ -11,7 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        ApiHandler.getAllFlags { flags in
+            DataManager.shared.flags = flags
+            DataManager.shared.svgLinks = ApiHandler.getAllSvgs(flags: flags)
+        }
     }
 
     @IBAction func flagsButton(_ sender: Any) {
