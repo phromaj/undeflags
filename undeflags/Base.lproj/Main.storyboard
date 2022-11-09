@@ -17,40 +17,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHP-ve-mlb">
-                                <rect key="frame" x="134" y="558" width="126" height="35"/>
+                                <rect key="frame" x="91" y="601" width="211" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Drapeaux"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Drapeaux">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" systemColor="labelColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.80784313730000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="flagsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EmG-Vx-8KL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ax-ZY-wHh">
-                                <rect key="frame" x="134" y="606" width="126" height="35"/>
+                                <rect key="frame" x="91" y="644" width="211" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="C0X-jl-054"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Testez-vous !"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Testez-vous !">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" systemColor="labelColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.80784313730000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="gameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNu-7Z-d03"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UndeFlags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-gb-B3Z">
-                                <rect key="frame" x="109" y="204" width="175" height="45"/>
-                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ensemble pour un monde plus inclusif et respectueux de vos droits à toutes et tous." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBT-dt-DqA">
+                                <rect key="frame" x="65" y="433" width="263" height="74.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pride-flag" translatesAutoresizingMaskIntoConstraints="NO" id="ja0-fa-had">
+                                <rect key="frame" x="0.0" y="117" width="393" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="8Ax-ZY-wHh" firstAttribute="top" secondItem="SHP-ve-mlb" secondAttribute="bottom" constant="13" id="3FE-r2-tPJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ax-ZY-wHh" secondAttribute="trailing" constant="133" id="3JU-g0-Rp4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Ax-ZY-wHh" secondAttribute="bottom" constant="177" id="NyE-Pm-98n"/>
-                            <constraint firstItem="8Ax-ZY-wHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="Tb2-A3-PUj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SHP-ve-mlb" secondAttribute="trailing" constant="133" id="emB-ph-gPQ"/>
-                            <constraint firstItem="DhL-gb-B3Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="fkn-wT-CYK"/>
-                            <constraint firstItem="DhL-gb-B3Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="101" id="s5p-RN-RNO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DhL-gb-B3Z" secondAttribute="trailing" constant="109" id="xYy-0b-6ZQ"/>
-                            <constraint firstItem="SHP-ve-mlb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="xZu-PR-8ad"/>
+                            <constraint firstItem="8Ax-ZY-wHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="Bhx-zR-dNK"/>
+                            <constraint firstItem="hBT-dt-DqA" firstAttribute="centerX" secondItem="SHP-ve-mlb" secondAttribute="centerX" id="ImT-kT-5Dz"/>
+                            <constraint firstItem="8Ax-ZY-wHh" firstAttribute="leading" secondItem="SHP-ve-mlb" secondAttribute="leading" id="JMB-pS-TSm"/>
+                            <constraint firstItem="SHP-ve-mlb" firstAttribute="top" secondItem="hBT-dt-DqA" secondAttribute="bottom" constant="93.333333333333314" id="XAh-tm-h3E"/>
+                            <constraint firstItem="8Ax-ZY-wHh" firstAttribute="top" secondItem="SHP-ve-mlb" secondAttribute="bottom" constant="8.6666666666666288" id="cAV-wd-J9y"/>
+                            <constraint firstItem="hBT-dt-DqA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="iAm-iC-aeP"/>
+                            <constraint firstItem="hBT-dt-DqA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jb1-3t-hc9"/>
+                            <constraint firstItem="hBT-dt-DqA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="44.333333333333371" id="mF5-9q-oAX"/>
+                            <constraint firstItem="hBT-dt-DqA" firstAttribute="centerX" secondItem="8Ax-ZY-wHh" secondAttribute="centerX" id="obs-is-csI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Ax-ZY-wHh" secondAttribute="bottom" constant="139" id="zvq-Xm-hxv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iqJ-tj-41I"/>
@@ -206,21 +228,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS6-qK-e6m">
-                                <rect key="frame" x="0.0" y="158" width="393" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="158" width="393" height="31.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9Z-R6-dQO">
-                                <rect key="frame" x="16" y="366" width="361" height="302"/>
+                                <rect key="frame" x="16" y="391.33333333333326" width="361" height="276.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276.66666666666674" id="GSF-oz-ogR"/>
+                                </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Année" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNL-Ff-mFb">
-                                <rect key="frame" x="0.0" y="248" width="393" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="197" width="393" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aRB-2G-JD9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot-Italic" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -228,12 +256,11 @@
                         <viewLayoutGuide key="safeArea" id="36p-Id-vV9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="36p-Id-vV9" firstAttribute="trailing" secondItem="jNL-Ff-mFb" secondAttribute="trailing" id="8CG-cC-Pta"/>
-                            <constraint firstItem="jNL-Ff-mFb" firstAttribute="leading" secondItem="36p-Id-vV9" secondAttribute="leading" id="BLo-U6-FwC"/>
-                            <constraint firstItem="a9Z-R6-dQO" firstAttribute="top" secondItem="jNL-Ff-mFb" secondAttribute="bottom" constant="97" id="NbC-nh-JAQ"/>
-                            <constraint firstItem="jNL-Ff-mFb" firstAttribute="top" secondItem="WS6-qK-e6m" secondAttribute="bottom" constant="69" id="VoP-f8-qVY"/>
+                            <constraint firstItem="jNL-Ff-mFb" firstAttribute="leading" secondItem="WS6-qK-e6m" secondAttribute="leading" id="TUW-XN-X56"/>
                             <constraint firstItem="36p-Id-vV9" firstAttribute="bottom" secondItem="a9Z-R6-dQO" secondAttribute="bottom" constant="150" id="WRW-p6-dni"/>
                             <constraint firstItem="a9Z-R6-dQO" firstAttribute="leading" secondItem="36p-Id-vV9" secondAttribute="leading" constant="16" id="eYS-nU-XjQ"/>
+                            <constraint firstItem="jNL-Ff-mFb" firstAttribute="top" secondItem="WS6-qK-e6m" secondAttribute="bottom" constant="7.3333333333333428" id="gHd-Qs-1ic"/>
+                            <constraint firstItem="jNL-Ff-mFb" firstAttribute="trailing" secondItem="WS6-qK-e6m" secondAttribute="trailing" id="qf1-D5-lEp"/>
                             <constraint firstItem="36p-Id-vV9" firstAttribute="trailing" secondItem="WS6-qK-e6m" secondAttribute="trailing" id="qpd-le-aJg"/>
                             <constraint firstItem="WS6-qK-e6m" firstAttribute="top" secondItem="36p-Id-vV9" secondAttribute="top" constant="99" id="sQe-8d-PpF"/>
                             <constraint firstItem="36p-Id-vV9" firstAttribute="trailing" secondItem="a9Z-R6-dQO" secondAttribute="trailing" constant="16" id="wUw-L1-LdQ"/>
@@ -270,6 +297,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pride-flag" width="1528" height="1216"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
