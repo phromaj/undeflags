@@ -6,40 +6,51 @@
 //
 
 import Foundation
-typealias CompletionHandler = (_ flags: [Flag]) -> Void
 
-public var svgLinks = [URL]()
+class ApiHandler {
+    
+    typealias CompletionHandler = (_ flags: [Flag]) -> Void
 
-func getAllFlags(completion: @escaping CompletionHandler) {
-    
-    let url = URL(string:"https://pride.dev/api/flags")
-    
-    // Make the async request and pass the resulting json object to the callback
-    let task = URLSession.shared.dataTask(with: url! , completionHandler:  { (data, response, error) in
-        do {
-            if (try JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject]) != nil {
-                let flags =  parse(json: data!)
-                
-                getAllSvgs(flags: <#T##[Flag]#>)
-                
-                completion(flags)
+    static func getAllFlags(completion: @escaping CompletionHandler) {
+        
+        let url = URL(string:"https://pride.dev/api/flags")
+        
+        // Make the async request and pass the resulting json object to the callback
+        let task = URLSession.shared.dataTask(with: url! , completionHandler:  { (data, response, error) in
+            do {
+                if (try JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject]) != nil {
+                    let flags =  self.parse(json: data!)
+                                        
+                    completion(flags)
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
             }
-        } catch let error as NSError {
-            print(error.localizedDescription)
+        })
+        task.resume()
+    }
+
+    static func getAllSvgs(flags: [Flag]) -> [URL]{
+        var svgLinks = [URL]()
+        for flag in flags {
+            svgLinks.append(URL(string: "https://pride.dev/api/flags/\(flag.id)/SVG")!)
         }
-    })
-    task.resume()
+        return svgLinks
+    }
+
+    
+    static func parse(json: Data) -> [Flag] {
+        let decoder = JSONDecoder()
+        if let flags = try? decoder.decode(Flag.self, from: json) {
+            return [flags]
+        }
+        return []
+    }
+    
 }
 
-func getAllSvgs(flags: [Flag]) -> Void{
-    for flag in flags {
-        svgLinks.append(URL(string: "https://pride.dev/api/flags/\(flag.id)/SVG")!)
-    }
-}
+//        getAllFlags { flags in
+//DataManager.shared.flags = flags
+//}
 
-func parse(json: Data) -> [Flag] {
-    let decoder = JSONDecoder()
-    if let flags = try? decoder.decode(Flag.self, from: json) {
-        return [flags]
-    }
-}
+
