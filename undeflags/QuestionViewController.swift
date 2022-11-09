@@ -17,13 +17,12 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answer2Button: UIButton!
     
     @IBOutlet weak var answer3Button: UIButton!
-    var selectedQuestion: Question
-    var count: Int = 1
-    var questions : [Question] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
         var buttons: [UIButton] = []
+        var questions : [Question] = []
+        
+        var selectedQuestion: Question
         buttons.append(answer1Button)
         buttons.append(answer2Button)
         buttons.append(answer3Button)
@@ -50,15 +49,15 @@ class QuestionViewController: UIViewController {
     
     
     @IBAction func answerOneAction(_ sender: UIButton) {
-        chooseAnswer(button: sender)
+        //chooseAnswer(button: sender)
     }
     
     @IBAction func answerTwoAction(_ sender: UIButton) {
-        chooseAnswer(button: sender)
+        //chooseAnswer(button: sender)
 
     }
     @IBAction func answerThreeAction(_ sender: UIButton) {
-        chooseAnswer(button: sender)
+        //chooseAnswer(button: sender)
 
     }
     
@@ -97,16 +96,15 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    func chooseAnswer(button: UIButton){
-        if button.title(for: .normal)! == self.selectedQuestion.answer{
+    func chooseAnswer(button: UIButton, selectedQuestion: Question){
+        if button.title(for: .normal)! == selectedQuestion.answer{
             // WIN POINT
+            print("you wiiin")
             PlayerDataManager.shared.addPoint()
-            count += 1
             reloadUI()
-            
         }
         else {
-            count += 1
+            print("you looooooose")
             reloadUI()
             // LOOSE POINTS
         }
@@ -114,7 +112,7 @@ class QuestionViewController: UIViewController {
     }
     
     func reloadUI(){
-        
+       
     }
     
 
