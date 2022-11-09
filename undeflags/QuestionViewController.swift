@@ -11,6 +11,21 @@ class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        if let user = UserDefaults.standard.data(forKey: "player") {
+//            do {
+//                // Create JSON Decoder
+//                let decoder = JSONDecoder()
+//
+//                // Decode Note
+//                let player = try decoder.decode(Player.self, from: user)
+//                print(player)
+//
+//            } catch {
+//                print("Unable to Decode Note (\(error))")
+//            }
+//        }
+        let player = PlayerDataManager.shared.player
+        print(player ?? "optional")
 
         // Do any additional setup after loading the view.
     }
