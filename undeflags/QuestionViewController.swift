@@ -17,18 +17,19 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answer2Button: UIButton!
     
     @IBOutlet weak var answer3Button: UIButton!
+    var selectedQuestion: Question = Question(answer: "", link: "", index: 0, hasBeenQuestion: false)
+    var questions: [Question] = []
+    var level: Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var buttons: [UIButton] = []
-        var questions : [Question] = []
-        
-        var selectedQuestion: Question
         buttons.append(answer1Button)
         buttons.append(answer2Button)
         buttons.append(answer3Button)
-
-        
-        
+        // Set player points to 0
+        PlayerDataManager.shared.player?.points = 0
         
         
         for (index, flag) in DataManager.shared.flags!.enumerated() {
@@ -36,28 +37,28 @@ class QuestionViewController: UIViewController {
                                               link: DataManager.shared.svgLinks![index],
                                               index: index,
                                               hasBeenQuestion: false)
-            questions.append(question)
+            self.questions.append(question)
         }
         
         // Choose random question
-        selectedQuestion = selectQuestion(questions: questions)
+        self.selectedQuestion = selectQuestion(questions: self.questions)
         
         // Update UI
-        self.changeButtonTitle(buttons: buttons, previousQuestion: selectedQuestion, questions: questions)
-        self.reloadWebView(urlString: selectedQuestion.link)
+        self.changeButtonTitle(buttons: buttons, previousQuestion: self.selectedQuestion, questions: self.questions)
+        self.reloadWebView(urlString: self.selectedQuestion.link)
     }
     
     
     @IBAction func answerOneAction(_ sender: UIButton) {
-        //chooseAnswer(button: sender)
+        chooseAnswer(button: sender)
     }
     
     @IBAction func answerTwoAction(_ sender: UIButton) {
-        //chooseAnswer(button: sender)
+        chooseAnswer(button: sender)
 
     }
     @IBAction func answerThreeAction(_ sender: UIButton) {
-        //chooseAnswer(button: sender)
+        chooseAnswer(button: sender)
 
     }
     
@@ -90,29 +91,57 @@ class QuestionViewController: UIViewController {
             buttons.remove(at: index)
         }
         for button in buttons {
-            var randomQuestion = questionsWithoutPrevious.randomElement()
-            button.setTitle(randomQuestion?.answer, for: .normal)
-            questionsWithoutPrevious.remove(at: randomQuestion!.index)
+            if let index = questionsWithoutPrevious.indices.randomElement(){
+                button.setTitle(questionsWithoutPrevious[index].answer, for: .normal)
+                questionsWithoutPrevious.remove(at: index)
+            }
+            
         }
     }
     
-    func chooseAnswer(button: UIButton, selectedQuestion: Question){
-        if button.title(for: .normal)! == selectedQuestion.answer{
-            // WIN POINT
+    func chooseAnswer(button: UIButton){
+        if button.title(for: .normal)! == self.selectedQuestion.answer{
             print("you wiiin")
+            // Add a point to player
             PlayerDataManager.shared.addPoint()
-            reloadUI()
+            // Select new question
+            loadNextQuestion()
         }
         else {
             print("you looooooose")
-            reloadUI()
-            // LOOSE POINTS
+            // Select new question
+            loadNextQuestion()
+            
         }
-
+    }
+    
+    func loadNextQuestion(){
+        self.level += 1
+        // End game if we completed level 5
+        if(level > 5){
+            // Push ending screen
+            print("GAME IS WON OOOOOVVERRR")
+            print(PlayerDataManager.shared.player?.points)
+        }
+        // Or keep adding questions
+        else {
+            // Choose random question
+            
+            self.selectedQuestion = selectQuestion(questions: self.questions)
+            // Reload UI
+            reloadUI()
+        }
+        
     }
     
     func reloadUI(){
-       
+        // Update UI
+        var buttons: [UIButton] = []
+        buttons.append(answer1Button)
+        buttons.append(answer2Button)
+        buttons.append(answer3Button)
+        self.changeButtonTitle(buttons: buttons, previousQuestion: self.selectedQuestion, questions: self.questions)
+        self.reloadWebView(urlString: self.selectedQuestion.link)
     }
     
 
