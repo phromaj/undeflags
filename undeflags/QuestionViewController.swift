@@ -16,14 +16,20 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet weak var answer2Button: UIButton!
     
+    @IBOutlet weak var answerLabelField: UILabel!
+    
     @IBOutlet weak var answer3Button: UIButton!
+    
     var selectedQuestion: Question = Question(answer: "", link: "", index: 0, hasBeenQuestion: false)
     var questions: [Question] = []
     var level: Int = 0
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        answerLabelField.text = ""
+
         var buttons: [UIButton] = []
         buttons.append(answer1Button)
         buttons.append(answer2Button)
@@ -71,7 +77,7 @@ class QuestionViewController: UIViewController {
     
     func selectQuestion(questions: [Question]) -> Question{
         var selectedQuestion = questions.randomElement()
-        if selectedQuestion!.hasBeenQuestion {
+        if selectedQuestion!.hasBeenQuestion == true {
             selectQuestion(questions: questions)
         }
         selectedQuestion?.hasBeenQuestion = true
@@ -101,14 +107,25 @@ class QuestionViewController: UIViewController {
     
     func chooseAnswer(button: UIButton){
         if button.title(for: .normal)! == self.selectedQuestion.answer{
-            // Add a point to player
-            PlayerDataManager.shared.addPoint()
-            // Select new question
-            loadNextQuestion()
-        }
+                // Add a point to player
+                PlayerDataManager.shared.addPoint()
+                answerLabelField.text = "Bravo ! C'était la bonne réponse"
+            let seconds = 1.5
+                DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                    // Select new question
+                    self.loadNextQuestion()
+                }
+                
+            }
+
+           
         else {
-            // Select new question
-            loadNextQuestion()
+            answerLabelField.text = "Raté ! La bonne réponse était : " + self.selectedQuestion.answer
+            let seconds = 1.5
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                // Select new question
+                self.loadNextQuestion()
+            }
             
         }
     }
@@ -116,10 +133,11 @@ class QuestionViewController: UIViewController {
     func loadNextQuestion(){
         self.level += 1
         // End game if we completed level 5
-        if(level > 5){
+        if(level >= 5){
             // HERE Push ending screen ////////
-            //////////////////////////////////////////////////////////////////////
-            print("GAME IS WON OOOOOVVERRR")
+            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "final") as? FinalViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
             print(PlayerDataManager.shared.player?.points)
         }
         // Or keep adding questions
@@ -139,6 +157,7 @@ class QuestionViewController: UIViewController {
         buttons.append(answer1Button)
         buttons.append(answer2Button)
         buttons.append(answer3Button)
+        answerLabelField.text = ""
         self.changeButtonTitle(buttons: buttons, previousQuestion: self.selectedQuestion, questions: self.questions)
         self.reloadWebView(urlString: self.selectedQuestion.link)
     }
